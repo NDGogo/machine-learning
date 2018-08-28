@@ -9,17 +9,17 @@
 
 ## Code Snippets
     - Splitting data frames: the 0.8 tells H2O to put 80% in the first split, the rest in the second split.
-        ```python
+ ```python
         train, test = data.split_frame([**0.8**])
-        ```
+```
     - Generating confusion matrix:
-        ```python
+```python
         model.confusion_matrix(train)
-        ```
+```
     - Making predictions:
-        ```python
+```python
         model.predict(test)
-        ```
+```     
 
 ## Reference List
     - Cook, D. 2016, 'Practical Machine Learning with H2O', 1st edn.
