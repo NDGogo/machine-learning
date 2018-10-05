@@ -8,7 +8,6 @@
     - Every change made involves a data copy. That means the frame will change too. A lot of operations in H2O are lazy, meaning the requested change is recorded but not carried out until it has to be. (Cook 2016, p 34)
 
 ## Code Snippets
-    - 
  ```python
     def data_manipulation():
         # Splitting data frames: the 0.8 tells H2O to put 80% in the first split, the rest in the second split.
