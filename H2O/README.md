@@ -10,17 +10,26 @@
 ## Code Snippets
     - 
  ```python
-    # Splitting data frames: the 0.8 tells H2O to put 80% in the first split, the rest in the second split.
-    train, test = data.split_frame([**0.8**])
-```
-```python
-    # Generating confusion matrix:
-    model.confusion_matrix(train)
-```
+    def data_manipulation():
+        # Splitting data frames: the 0.8 tells H2O to put 80% in the first split, the rest in the second split.
+        train, test = data.split_frame([0.8])
+
+        # Convert H2O frame to pandas frame
+        dataframe = dataframe.as_data_frame(use_pandas=True)
     
-```python
-    # Making predictions:
-    model.predict(test)
+    def model_preparation():
+        # Set column as factor to represent nominal values (categorical?)
+        column["colName"] = column["colName"].asfactor()
+
+    def model_manipulation():
+        # Generating confusion matrix:
+        model.confusion_matrix(train)
+
+        # Making predictions:
+        model.predict(test)
+
+        # Show model characteristics (including a confusion matrix)
+        model.show()
 ```     
 
 ## Reference List
