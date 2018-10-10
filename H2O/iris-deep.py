@@ -4,8 +4,8 @@ import h2o
 h2o.init()
 
 # Import data to H2O cluster
-datasets = "https://raw.githubusercontent.com/DarrenCook/h2o/bk/datasets/"
-data = h2o.import_file(datasets + "iris_wheader.csv")
+datasets = "https://raw.githubusercontent.com/DarrenCook/h2o/bk/datasets/iris_wheader.csv"
+data = h2o.import_file(datasets)
 
 # Remove label column and leave only features
 y = "class"
